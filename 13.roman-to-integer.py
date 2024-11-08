@@ -17,11 +17,11 @@ class Solution:
             'D': 500,
             'M': 1000
         }
-        for i in range(len(s)-1):
+        for i in range(len(s) - 1):
             if roman[s[i]] < roman[s[i+1]]:
-                res = res - roman[s[i]]
+                res -= roman[s[i]]
             else:
-                res = res + roman[s[i]]
+                res += roman[s[i]]
         return res + roman[s[-1]]
 
 # @lc code=end
